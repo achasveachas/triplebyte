@@ -1,27 +1,29 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.column {
+  margin-left: 25px;
+  flex-grow: 1;
+  background: lightblue;
+}
+.column:last-of-type {
+  margin-right: 25px;
 }
 
-.App-logo {
-  height: 180px;
+#Winnie {
+  background: #8e6e95;
 }
 
-.App-header {
-  background-color: #222;
-  height: 250px;
-  padding: 20px;
-  color: white;
+#Bob {
+  background: #39a59c;
 }
 
-.App-title {
-  font-size: 1.5em;
+#Thomas {
+  background: #344759;
 }
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+#George {
+  background: #e8741e;
 }

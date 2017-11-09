@@ -1,17 +1,44 @@
 import React, { Component } from 'react';
-import logo from './KL_30-flipped.jpg';
 import './App.css';
+import Column from './Column'
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to the Triplebyte technical interview with Yechiel Kalmenson!</h1>
-        </header>
 
+  constructor(props) {
+    
+    super(props)
+    this.state = {
+      columns: [
+        {
+          name: "Winnie",
+          cards: [{item: "Buy Eggs"}, {item: "Return Books"}]
+        },
+        {
+          name: "Bob",
+          cards: [{item: "Buy Eggs"}, {item: "Return Books"}]
+        },
+        {
+          name: "Thomas",
+          cards: [{item: "Buy Eggs"}, {item: "Return Books"}]
+        },
+        {
+          name: "George",
+          cards: [{item: "Buy Eggs"}, {item: "Return Books"}]
+        }
+      ]
+    }
+  }
+
+
+  render() {
+
+    const renderColumns = this.state.columns.map(column => <Column name={column.name} cards={column.cards} />)
+    
+    return (
+        <div className="App">
+          {renderColumns}
       </div>
+
     );
   }
 }
